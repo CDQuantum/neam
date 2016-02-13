@@ -23,8 +23,7 @@ module.exports = {
                 next();
             }
             console.log(data.toString());
-            res.render('home/list');
-
+            res.render('home/list',{msg:data.toString()});
         });
     }
 

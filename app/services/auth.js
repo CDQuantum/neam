@@ -23,21 +23,17 @@ module.exports = {
             username:username,
             password:password
         };
-
-        var args = {
-            data: paras,
-            headers: { "Content-Type": "application/json" }
-        };
+        var args={data: paras};
         var client = new Client();
-        client.post(apis.access_token_url,args,function(data,res){
+        client.post(apis.access_token_url, args, function (data, res) {
             // parsed response body as js object
             console.log(data.toString());
             // raw response
             //console.log(res);
-            return callback(data,null);
+            return callback(data, null);
         }).on('error', function (err) {
             console.log('something went wrong on the request', err.request.options);
-            return callback(null,err);
+            return callback(null, err);
         });
 
     }

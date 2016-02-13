@@ -14,6 +14,11 @@ var RES_API_PORT = 7070;
 const RES_API_BASIC_URL='http://'+RES_API_HOST+':'+RES_API_PORT;
 
 module.exports = {
+    //sign_const
+    sign_const:{
+        ACCESS_TOKEN:'access_token',
+        SIGNATURE:'signature'
+    },
     //app key
 	client_global : {
 		client_id : 'sjww-xyweb-node',

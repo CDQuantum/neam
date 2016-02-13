@@ -48,7 +48,7 @@ connect()
 function listen() {
     if (app.get('env') === 'test') return;
     app.listen(port);
-    console.log("\n✔ NERM 已成功启动, 访问:http://localhost:%d , 处于 %s 模式.", port, app.get('env'));
+    console.log("\n✔ NERM 服务( %s 模式)已成功启动, 访问:http://localhost:%d ", app.get('env'),port);
 }
 
 function connect() {

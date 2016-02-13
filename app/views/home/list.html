@@ -2,10 +2,16 @@
 <link rel="stylesheet" href="/css/user.css"/>
 {{/extend}}
 
+<div class="content">
+   list:
+   <p>
+      {{{msg}}}
+   </p>
+   <ul>
+      {{#each user}}
+      <li> {{name}} </li>
+      {{/each}}
+   </ul>
 
-list:
-<ul>
-{{#each user}}
-   <li> {{name}} </li>
-{{/each}}
-</ul>
+</div>
+
