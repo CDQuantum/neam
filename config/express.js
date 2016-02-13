@@ -15,15 +15,17 @@ const methodOverride = require('method-override');
 const csrf = require('csurf');
 const multer = require('multer');
 const hbs = require('hbs');
-
+const helmet = require('helmet');
 const mongoStore = require('connect-mongo')(session);
 const flash = require('connect-flash');
 const winston = require('winston');
 const helpers = require('view-helpers');
 const config = require('./config');
 const pkg = require('../package.json');
+const rh=require('../app/middlewares/registerHelper');
 
 const env = process.env.NODE_ENV || 'development';
+
 
 /**
  * 声明
@@ -70,11 +72,20 @@ module.exports = function (app) {
     app.engine('html', hbs.__express);
     /**** 指定模板文件的后缀名为html end ****/
 
-    /**********设置hbs 子模版************/
-    hbs.registerPartials(__dirname+'/views/common');
+    /**********设置hbs 母模版文件位置************/
+    hbs.registerPartials(config.root + '/app/views/includes');
     /**********设置hbs 子模版 END************/
+    hbs.registerHelper("compare",rh.compare);
+    hbs.registerHelper("equal",rh.equal);
+    hbs.registerHelper('block',rh.block);
+    hbs.registerHelper('extend',rh.extend);
+    //console.log(config.root + '/app/views/includes')
 
 
+
+    /********************** 安全设置部分 *********************/
+    app.use(helmet());  //helmet包含九个安全中件间 csp hidePoweredBy hpkp hsts ieNoOpen noCache noSniff frameguard xssFilter
+    /*********************** 安全设置部分 end  ****************/
 
     // 声明 package.json to views
     app.use(function (req, res, next) {

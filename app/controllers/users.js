@@ -13,8 +13,8 @@ var authService = require('../services/auth');
 module.exports = {
 
   load: function(req,res,next,_id){
-    const criteria = { _id };
-    req.profile = User.load({ criteria });
+    const criteria = _id ;
+    req.profile = User.load(criteria);
     if (!req.profile) return next(new Error('User not found'));
     next();
   },

@@ -19,7 +19,7 @@ var mongoose = require('mongoose');
 var config = require('./config/config');
 
 var models = join(__dirname, 'app/models');
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 3000;   //服务端口号
 var app = express();
 
 /**
@@ -48,12 +48,11 @@ connect()
 function listen() {
     if (app.get('env') === 'test') return;
     app.listen(port);
-    //console.log('Express app started on port ' + port);
-    console.log("\n✔ NERM 已成功启动,端口号: %d , 处于 %s 模式.", port, app.get('env'));
+    console.log("\n✔ NERM 已成功启动, 访问:http://localhost:%d , 处于 %s 模式.", port, app.get('env'));
 }
 
 function connect() {
-    console.log("\n  NERM DB start loading …… ");
+    //console.log("\n  NERM DB start loading …… ");
     var options = { server: { socketOptions: { keepAlive: 1 } } };
     return mongoose.connect(config.db, options).connection;
 }

@@ -9,6 +9,7 @@
 
 const users = require('../app/controllers/users');
 //const articles = require('../app/controllers/articles');
+const home = require('../app/controllers/home');
 const auth = require('../app/middlewares/authorization');
 
 /**
@@ -23,6 +24,9 @@ const commentAuth = [auth.requiresLogin, auth.comment.hasAuthorization];
  */
 
 module.exports = function (app) {
+
+  app.get('/index', home.index);
+  app.get('/list', home.list);
 
   // user routes
   app.get('/login', users.login);
