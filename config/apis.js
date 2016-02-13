@@ -14,98 +14,35 @@ var RES_API_PORT = 7070;
 const RES_API_BASIC_URL='http://'+RES_API_HOST+':'+RES_API_PORT;
 
 module.exports = {
+    //app key
 	client_global : {
 		client_id : 'sjww-xyweb-node',
 		secret : 'sjww2016-xyweb-node',
 		redirect_uri : 'test',
 		grant_type : 'password'
     },
+    //TOKEN URL
     access_token_url: AUTH_API_BASIC_URL+'/pwd/oauth2/access_token',
-    teacher_info_url: XY_API_BASIC_URL+'/api/pri/teacher/info',
 
-    live_plan_options : {
-        hostname : XY_API_HOST,
-        port : XY_API_PORT,
-        path : '/api/pri/live/plan',
-        method : 'POST'
-    },
-    course_info_options : {
-        hostname : XY_API_HOST,
-        port : XY_API_PORT,
-        path : '/api/pri/course/courseInfo',
-        method : 'POST'
-    },
-    school_info_options : {
-        hostname : XY_API_HOST,
-        port : XY_API_PORT,
-        path : '/api/pri/school/info',
-        method : 'POST'
-    },
-    teacher_list_options : {
-        hostname : XY_API_HOST,
-        port : XY_API_PORT,
-        path : '/api/pri/teacher/list',
-        method : 'POST'
-    },
-    class_list_options : {
-        hostname : XY_API_HOST,
-        port : XY_API_PORT,
-        path : '/api/pri/class/list',
-        method : 'POST'
-    },
-    student_list_options : {
-        hostname : XY_API_HOST,
-        port : XY_API_PORT,
-        path : '/api/pri/student/list',
-        method : 'POST'
-    },
-    message_unread_count_options : {
-        hostname : XY_API_HOST,
-        port : XY_API_PORT,
-        path : '/api/pri/announce/getCountNoRead',
-        method : 'POST'
-    },
-    message_list_options : {
-        hostname : XY_API_HOST,
-        port : XY_API_PORT,
-        path : '/api/pri/announce/list',
-        method : 'POST'
-    },
-    message_detail_options : {
-        hostname : XY_API_HOST,
-        port : XY_API_PORT,
-        path : '/api/pri/announce/detail',
-        method : 'POST'
-    },
-    score_list_options : {
-        hostname : XY_API_HOST,
-        port : XY_API_PORT,
-        path : '/api/pri/score/searchAllBatchScore',
-        method : 'POST'
-    },
-    
-    video_list_options : {
-        hostname : RES_API_HOST,
-        port : RES_API_PORT,
-        path : '/api/pri/livealbum/livePackageListByIds',
-        method : 'POST'
-    },
-    doc_list_latest_options : {
-        hostname : RES_API_HOST,
-        port : RES_API_PORT,
-        path : '/api/pri/livealbum/liveResource',
-        method : 'POST'
-    },
-    course_pkg_detail_options : {
-        hostname : RES_API_HOST,
-        port : RES_API_PORT,
-        path : '/api/pri/pkg/pkglist',
-        method : 'POST'
-    },
-    course_pkg_week_resource_options : {
-        hostname : RES_API_HOST,
-        port : RES_API_PORT,
-        path : '/api/pri/livealbum/liveResourceByWeek',
-        method : 'POST'
-    }
+    //XY API
+    teacher_info_url: XY_API_BASIC_URL+'/api/pri/teacher/info',
+    live_plan_url:XY_API_BASIC_URL+'/api/pri/live/plan',
+    course_info_url : XY_API_BASIC_URL+'/api/pri/course/courseInfo',
+    school_info_url : XY_API_BASIC_URL+'/api/pri/school/info',
+    teacher_list_url: XY_API_BASIC_URL+'/api/pri/teacher/list',
+    class_list_url : XY_API_BASIC_URL+'/api/pri/class/list',
+    student_list_url : XY_API_BASIC_URL+'/api/pri/student/list',
+    message_unread_count_url : XY_API_BASIC_URL+'/api/pri/announce/getCountNoRead',
+    message_list_url : XY_API_BASIC_URL+ '/api/pri/announce/list',
+    message_detail_url : XY_API_BASIC_URL+ '/api/pri/announce/detail',
+    score_list_url : XY_API_BASIC_URL+'/api/pri/score/searchAllBatchScore',
+
+    //RESOURCE API
+    video_list_url : RES_API_BASIC_URL+ '/api/pri/livealbum/livePackageListByIds',
+    doc_list_latest_url : RES_API_BASIC_URL+'/api/pri/livealbum/liveResource',
+    course_pkg_detail_url : RES_API_BASIC_URL+'/api/pri/pkg/pkglist',
+    course_pkg_week_resource_url : RES_API_BASIC_URL+'/api/pri/livealbum/liveResourceByWeek'
+
+
+
 };
