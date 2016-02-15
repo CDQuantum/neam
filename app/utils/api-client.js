@@ -12,6 +12,7 @@ var http = require('http'),
     urlParser = require('url'),
     util = require("util"),
     events = require("events"),
+    querystring = require('querystring'),
     zlib = require("zlib"),
     crypto = require('crypto'),
     uuid = require('node-uuid'),
@@ -225,7 +226,8 @@ exports.Client = function (options) {
                               }
                         }
                         options.data = args.data;
-                        options.headers['Content-Length'] = Buffer.byteLength((typeof args.data === 'string' ? args.data : JSON.stringify(args.data)), 'utf8');
+                        //options.headers['Content-Length'] = Buffer.byteLength((typeof args.data === 'string' ? args.data : JSON.stringify(args.data)), 'utf8');
+                        options.headers['Content-Length'] = querystring.stringify(args.data).length;
                     } else {
                         options.headers['Content-Length'] = 0;
                     }
@@ -233,6 +235,7 @@ exports.Client = function (options) {
                     // 'Content-Type': 'application/x-www-form-urlencoded',
                     options.headers['content-type'] = args.headers !== undefined ? args.headers['Content-Type'] : 'application/x-www-form-urlencoded';
                     debug(" content-type  ===>", options.headers['content-type']);
+                    debug(" header content-length: ",options.headers['Content-Length']);
                     // we have args, go and check if we have parameters
                     /*if (args.parameters && Object.keys(args.parameters).length > 0){
                      // validate URL consistency, and fix it
@@ -458,7 +461,8 @@ var ConnectManager = {
         if ((data instanceof Buffer) || (typeof data !== 'object')) {
             result = data;
         } else {
-            result = JSON.stringify(data);
+            //result = JSON.stringify(data);
+            result = querystring.stringify(data);
         }
         return result;
     },
