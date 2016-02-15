@@ -1,5 +1,5 @@
 module.exports = {
-  db: 'mongodb://otnp:otnp50@ds061415.mongolab.com:61415/db_rener',
+  db: '',
   facebook: {
     clientID: process.env.FACEBOOK_CLIENTID,
     clientSecret: process.env.FACEBOOK_SECRET,
