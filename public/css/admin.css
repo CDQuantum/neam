@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+body { background: #fff; }
+
+.header { height: 60px; }
+	.headerview { height: 60px; border-bottom: #fb6a49 solid 4px; line-height: 60px; font-size: 14px; background: #3b3c41; color: #fff; overflow: hidden; }
+	.header .logo { height: 60px; margin: 0px; padding: 8px 25px 0px 25px; background: #fb6a49; }
+	.header .logo img { height: 38px; }
+
+.navbar a { padding: 0px 28px; height: 60px; color: #818594; float: left; }
+	.navbar a.current { background: #4d4f56; color: #fff; }
+	.navbar a:hover { color: #bbb; }
+
+.toolbar li { margin-left: 20px; float: left; }
+	.toolbar li a { color: #999; }
+	.toolbar li i { width: 16px; height: 16px; margin: -4px 3px 0px 0px; display: inline-block; vertical-align: middle; background: url(/image/toolsbar_icons.png) no-repeat; }
+
+.breadcrumb { height: 70px; border-bottom: #ddd solid 1px; overflow: hidden; }
+	.breadcrumb .f_l { font-size: 20px; line-height: 70px; }
+	.breadcrumb .f_l b { margin: 0px 10px; color: #bbb; font-size: 14px; font-family: "simsun"; font-style: normal; }
+	.breadcrumb .f_r a { margin: 15px 0px 0px 0px; padding: 0px 15px; height: 38px; line-height: 38px; background: #96d9ff; color: #fff; font-size: 14px; float: left; }
+	.breadcrumb .f_r a i { margin-right: 5px; font-style: normal; }
+
+.footer { margin-top: 30px; }
+
+.class_list { height: 100px; margin-top: 30px; position: relative; }
+	.class_list .arrow { width: 50px; height: 100px; line-height: 120px; position: absolute; top: 0px; overflow: hidden; }
+	.class_list .arrow.l { left: -50px; }
+	.class_list .arrow.r { right: -50px; text-align: right; }
+
+.class_list .slider { height: 110px; overflow: hidden; }
+	.class_list .slider ul { width: 105%; }
+	.class_list .slider li { width: 270px; height: 100px; margin-right: 40px; float: left; }
+	.class_list .slider li .box { height: 98px; border: #e5e5e5 solid 1px; background: #fafafa; position: relative; }
+	.class_list .slider li .box h3 { height: 40px; line-height: 40px; padding: 0px 30px 0px 15px; font-size: 14px; color: #333; border-bottom: #e5e5e5 solid 1px; white-space: nowrap; word-break: keep-all; overflow: hidden; text-overflow: ellipsis; }
+	.class_list .slider li .box p { padding: 15px; border-top: #fff solid 1px; overflow: hidden; font-size: 14px; color: #999; }
+	.class_list .slider li .box i { width: 18px; height: 17px; float: left; background: url(/image/admin/class_bg.png) no-repeat; position: absolute; right: -2px; bottom: -1px; }
+	.class_list .slider li .box a { width: 20px; height: 20px; float: left; overflow: hidden; background: url(/image/userinfo_icons.png) no-repeat; text-indent: -9999px; position: absolute; top: 10px; right: 10px; }
+	.class_list .slider li.current .box { background: #96d9ff; border-color: #96d9ff; }
+	.class_list .slider li.current .box h3 { color: #fff; border-color: #96d9ff; }
+	.class_list .slider li.current .box p { color: #fff; }
+	.class_list .slider li.current .box a { background: url(/image/userinfo_icons_white.png) no-repeat; }
+	.class_list .slider li.current .box i { background-position: 0px -17px; }
+
+.student_list,.teacher_list { padding-top: 20px; overflow: hidden; }
+	.student_list ul,.teacher_list ul { width: 110%; }
+	.student_list li { width: 100px; margin: 15px 57px 15px 0px; float: left; font-size: 14px; text-align: center; position: relative; }
+	.student_list li img { width: 100px; height: 100px; }
+	.student_list li a { display: block; }
+	.student_list li span { width: 100px; height: 100px; line-height: 100px; background: rgba(0,0,0,0.5); text-align: center; color: #fff; float: left; position: absolute; left: 0px; top: 0px; display: none; }
+	.student_list li p { padding-top: 5px; }
+	.student_list li a:hover span { display: block; }
+
+.teacher_list li { width: 268px; height: 358px; margin: 20px 42px 20px 0px; border: #ddd solid 1px; float: left; overflow: hidden; position: relative; }
+	.teacher_list li .head { margin: 45px 0px 25px 0px; text-align: center; }
+	.teacher_list li .head img { width: 138px; height: 138px; border-radius: 50%; }
+	.teacher_list li .head p { padding-top: 10px; font-size: 16px; color: #333; }
+	.teacher_list li p { padding: 5px 25px 0px 25px; color: #999; font-size: 14px; white-space: nowrap; word-break: keep-all; overflow: hidden; text-overflow: ellipsis; }
+	.teacher_list li label { padding: 1px 5px; background: #fb6a49; font-size: 12px; color: #fff; display: inline-block; }
+	.teacher_list li a.edit { width: 20px; height: 20px; display: inline-block; background: url(/image/userinfo_icons.png) no-repeat; position: absolute; top: 10px; right: 10px; }
+	.teacher_list li:hover { border-color: #bbb; }
+
+.score_item { padding: 10px 0px; } 
+.score_item .top { padding: 20px 0px; overflow: hidden; }
+	.score_item .top span { font-size: 18px; color: #44b4f3; }
+	.score_item .top a { margin: 5px 0px 0px 15px; font-size: 14px; float: right; }
+	.score_item .top a i { width: 18px; height: 18px; margin: -4px 5px 0px 0px; vertical-align: middle; display: inline-block; background: url(/image/admin/tools.png) no-repeat; }
+	.score_item .top a.xg { color: #fb6a49; }
+	.score_item .top a.xg i { background-position: 0px 0px; }
+	.score_item .top a.dr { color: #41d44f; }
+	.score_item .top a.dr i { background-position: 0px -18px; }
+.score_item table { border-collapse: collapse; font-size: 14px; }
+	.score_item th,.score_item td { width: 12.5%; padding:15px 10px; border: #ddd solid 1px; color: #999 }
+	.score_item th { font-weight: normal; color: #333; font-size: 15px; }
+	.score_item td.red { color: #f00; }
+
+.search_box ul { padding: 15px 0px; overflow: hidden; }
+	.search_box li { padding: 10px 15px 10px 0px; font-size: 14px; float: left; }
+	.search_box li label { padding-right: 10px; }
+	.search_box li select { min-width: 200px; padding: 8px; }
+	.search_box li input[type="text"] { height: 36px; min-width: 200px; }
+	.search_box li input[type="submit"] { width: 70px; height: 36px; background: #3b3c41; color: #fff; border: none; cursor: pointer; }
+
+.download_list { border: #ddd solid 1px; }
+	.download_list ul { padding-top: 40px; overflow: hidden; }
+	.download_list li { width: 16.5%; height: 240px; text-align: center; float: left; }
+	.download_list li span { width: 105px; height: 128px; display: inline-block; background: url(/image/admin/download_file.png) no-repeat; position: relative; }
+	.download_list li span i { font-style: normal; font-size: 15px; color: #fb6a49; position: absolute; left: 14px; top: 15px; }
+	.download_list li p { height: 40px; margin: 5px 0px; padding: 0px 15px 0px 25px; line-height: 18px; font-size: 12px; overflow: hidden; }
+	.download_list li a { padding-left: 20px; color: #83d259; display: inline-block; background: url(/image/download.png) no-repeat; }
+	.download_list li.none span { background-position: 0px -128px; }
+	.download_list li.none p { color: #bbb; }
+	.download_list li.none font { font-size: 12px; color: #bbb; }
+
+.pages { padding: 30px 20px; overflow: hidden; _zoom: 1; text-align: center; }
+	.pages .total { margin-right: 10px; font-size: 14px; }
+	.pages .total b { margin: 0px 2px; color: #fb6a49; font-weight: normal; }
+	.pages .total span { color: #ccc; }
+	.pages ul { display: inline-block; }
+	.pages li { margin-left: -1px; display: inline-block;}
+	.pages li a { padding: 6px 12px; display: block; background: #fff; border: #ddd solid 1px; }
+	.pages li a:hover { background: #eee; }
+	.pages li.current a { background: #96d9ff; border-color: #96d9ff; color: #FFF; cursor: default; }
+	.pages li input[type="text"] { width: 40px; height: 32px; margin: 0px 10px; padding: 0px 5px; line-height: 32px; text-align: center; border: #ccc solid 1px; }
+	.pages li button { height: 32px; line-height: 32px; margin-top: -4px; vertical-align: middle; }
+
+
+/* 情景模式 */
+.modal_backdrop { position:fixed;top:0;right:0;bottom:0;left:0;z-index:9998;background:rgba(0,0,0,0.5); display: none; }
+.modal_dialog { min-width: 200px; background: #fff; position: fixed; z-index: 9999; top: 0px; display: none; }
+.modal_head { padding: 8px 15px; border-bottom: #eee solid 1px; background: #f5f5f5; overflow: hidden; }
+.modal_head .close { font-size: 18px; color: #bbb; float: right; }
+.modal_head h3 { font-size: 15px; line-height: 30px; color: #333; }
+.modal_foot { padding: 15px; border-top: #eee solid 1px; text-align: center; overflow: hidden; }
+.modal_foot .button { margin: 0px 10px; }
+.modal_body { padding: 15px; }
+
+/* 按钮 */
+.button,.button_mini { height: 34px; line-height: 34px; padding: 0px 10px; color: #fff; border-radius: 2px; border: none; background: #4d5869; display: inline-block; cursor: pointer; text-align: center; }
+.button:hover,.button_mini:hover { background: #3E4756; }
+.button_default { background: #fb6a49; }
+.button_default:hover { background: #fe785a; }
+.button_reverse { background: #f5f5f5; color: #666; border: #ddd solid 1px; }
+.button_reverse:hover { background: #fff; }
+.button_secure { background: #4b6; }
+.button_secure:hover { background: #3b5; }
+.button { min-width: 90px; height: 38px; line-height: 38px; font-size: 14px; }
+
+.modal_form dl { padding: 10px 0px; overflow: hidden; }
+	.modal_form dt { width: 120px; padding: 6px 15px 0px 10px; text-align: right; float: left; white-space: nowrap; word-break: keep-all; overflow: hidden; text-overflow: ellipsis; }
+	.modal_form dd { margin-left: 95px; }
+	.modal_form input[type="text"] { width: 200px; height: 34px; line-height: 34px; padding: 0px 5px; border: #ccc solid 1px; }
+	.modal_form select { width: 200px; border: #ccc solid 1px; padding: 8px; }
+	.modal_form textarea { width: 100%; height: 100px; border: #ccc solid 1px; box-sizing: border-box; resize: none; }
+	.modal_form .userhead { width: 100px; height: 100px; border-radius: 20px; margin: 10px 20px 0px 20px; }
+	.modal_form .upload_head { margin: 70px 0px 0px 20px; position: relative; }
+	.modal_form .upload_head .input_file { opacity:0;filter:alpha(opacity=0); width: 180px; z-index:2; position:absolute; left:0; top:0px; height:30px;cursor: pointer;  }

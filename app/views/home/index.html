@@ -1,0 +1,17 @@
+<div class="content">
+    <h1>{{title}}</h1>
+    <p>Welcome to {{title}}</p>
+
+    <div id="tt"></div>
+    <div id="page">
+        <th>
+            {{#each page.list}}
+            <tr>
+                <li>{{name}}:{{sex}}</li>
+            </tr>
+            {{/each}}
+        </th>
+        {{{page.pageDecorator}}}
+    </div>
+
+</div>
