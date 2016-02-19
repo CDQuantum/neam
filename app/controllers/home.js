@@ -17,7 +17,8 @@ module.exports = {
     list:function(req,res,next){
         var username="test_teacher_3";
         var pwd="123456";
-        authService.getToken(username,pwd,function(data,err){
+        req.session.access_token="6ddfdfsdf8878af7d8f";
+        authService.getToken(username,pwd,req,function(data,err){
             //console.log("ok");
             if(err){
                 next();

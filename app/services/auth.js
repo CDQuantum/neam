@@ -15,7 +15,7 @@ module.exports = {
     /**
      * 获取token
      */
-    getToken: function(username, password, callback) {
+    getToken: function(username, password,req, callback) {
         var paras = {
             username:username,
             password:password,
@@ -23,6 +23,7 @@ module.exports = {
             redirect_uri:apis.client_global.redirect_uri,
             grant_type:apis.client_global.grant_type
         };
+        console.log(" ======> is session:",req.session);
         var args={data: paras};
         var client = new Client();
         client.post(apis.access_token_url, args, function (data, res) {
